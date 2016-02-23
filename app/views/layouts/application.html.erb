@@ -8,7 +8,14 @@
 </head>
 <body>
 
-<%= yield %>
+
+  <%=  render 'layouts/header' %>
+
+  <div class="message"> <%= flash_messages %></div>
+
+     <div class="container">
+       <%= yield %>
+     </div>
 
 </body>
 </html>
