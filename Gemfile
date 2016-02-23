@@ -23,23 +23,27 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
+gem 'devise'
+# Fancy form
+gem 'bootstrap_form'
+# Css & Js library
+gem 'bootstrap-sass'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-
+  # Access an PRY console on local server or by using <%= binding.pry %>  anywhere you need it (migration , seed ,views ,model etcetc)
+  gem 'pry'
+  # Add "continue" ,"next", "step" on pry (usefull in loops or stack exploration)
+  gem 'pry-nav'
+  gem 'pry-stack_explorer'
+  # Make PRY default rails console
+  gem 'pry-rails'
+  gem 'pry-remote'
+  # Better exception page
+  gem 'better_errors'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
